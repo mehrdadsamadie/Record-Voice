@@ -1,0 +1,27 @@
+﻿<!--<input type="button" ng-click="play()" ng-hide="show">-->
+<div class="cnt" >
+    <div class="framplayer" >
+        <div class="vido">
+            <div >
+                <span>لطفا برای ارتباط با ما دکمه را فشار دهید</span>
+            </div>
+            <div ng-if="isenroll==true">
+                <img src="images/btn-play.png" ng-click="palyRecord()" />
+
+                <input id="Text1" type="text" ng-model="register.Name" />
+                <input id="Text1" type="text" ng-model="register.Phone" />
+                <input id="Button1" type="button" value="ثبت" ng-click="enroll()" />
+                <input id="Button1" type="button" value="حذف" ng-click="enroll()" />
+            </div>
+        </div>
+        <div ng-show="startDate">
+            <span>مدت زمان :</span><span style="font-family:BYekan" ng-bind="difrentTime(AssignedDate.now())"></span>
+        </div>
+        <div class="panel">
+            <img src="images/btn-play.png" ng-click="record()" />
+            <img src="images/btn-stop.png" ng-click="stopRecord()" />
+        </div>
+
+    </div>
+
+</div>

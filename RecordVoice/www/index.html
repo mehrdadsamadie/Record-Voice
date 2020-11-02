@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <link href="css/index.css" rel="stylesheet" />
+
+    <!-- BusDriver references -->
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding-top: 5px;
+          
+        }
+
+            body h2 {
+                color: #0026ff;
+            }
+
+        #map-canvas {
+            height: 50%;
+            position: initial !important;
+            overflow: hidden;
+            transform: none !important;
+            background-color: rgb(229, 227, 223);
+        }
+
+        .positionmap {
+            width: 50%;
+            height: 200px;
+            position: relative;
+            border: 3px solid #0026ff;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="angularMyApp">
+        <div class="container">
+
+        </div>
+        <div>
+            <div class="content">
+                <div class="span12 ui-view-container">
+                    <div class="well" ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <!--<script src="scripts/index.js"></script>-->
+    <script src="angularJs/sources/angular/angular.min.js"></script>
+    <script src="angularJs/sources/angular/angular-animate.min.js"></script>
+    <script src="angularJs/sources/angular/angular-sanitize.js"></script>
+    <script src="angularJs/sources/angular/angular-ui-router.js"></script>
+    <script src="angularJs/sources/angular/angular-local-storage.min.js"></script>
+    <!--<script type="text/javascript" server="http://edbazar.com/MobileUpdate/BootStrapper"
+            timeout="510000000000"
+            manifest="manifest.json"
+            src="bootstrap.js"></script>-->
+    <!--<script src="lib/cordova-app-loader-complete.js"></script>
+    <script src="lib/CordovaPromiseFS.js"></script>
+    <script type="text/javascript" src="autoupdate.js"></script>-->
+    <script src="angularJs/app/app.js"></script>
+    <script src="angularJs/service/service.js"></script>
+    <script src="angularJs/controllers/home/homeController.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        // Wait for Cordova to load
+        document.addEventListener("deviceready", onDeviceReady, false);
+        var domElement = document.getElementById("angularMyApp");
+        angular.bootstrap(domElement, ["MyApp"]);
+        // Cordova is ready
+
+      
+      
+        function onDeviceReady() {
+            
+        }
+
+    </script>
+   
+</body>
+</html>
